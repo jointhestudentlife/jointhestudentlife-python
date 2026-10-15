@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jointhestudentlife"
+version = "1.0.0"
+description = "Official Python SDK for The Student Life: student events, ticket prices, city guides and student deals in 85+ cities."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "The Student Life", email = "support@jointhestudentlife.com" }]
+keywords = ["the student life", "jointhestudentlife", "students", "international students", "erasmus", "study abroad", "events", "sdk", "api"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://jointhestudentlife.com/developers"
+Documentation = "https://jointhestudentlife.com/developers#rest"
+"API spec" = "https://jointhestudentlife.com/openapi.json"
+Issues = "https://jointhestudentlife.com/contact"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jointhestudentlife"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/jointhestudentlife", "README.md", "LICENSE", "pyproject.toml"]
